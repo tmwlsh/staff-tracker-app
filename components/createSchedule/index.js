@@ -25,21 +25,18 @@ const CreateScheduleBlock = () => {
           </div>
         </label>
 
-        {  }
-
         <label className={styles.scheduleFormLabel}>
           <span>Schedule Slot</span>
           <div className={styles.scheduleSlotRow}>
             <input type="text" placeholder="Location. eg. Kitchen / Vehicle 2 / Leeds Office" />
             <select>
               <option disabled selected="selected">Staff Member</option>
-              {data.staff.map(item => (
-                <option>{item.name}</option>
+              {data.staff.map((item, index) => (
+                <option key={`${item.name.replace(/\s+/g, '-').toLowerCase()}-${index}`}>{item.name}</option>
               ))}
             </select>
           </div>
         </label>
-
 
         <div className={styles.formOptions}>
           <p>Add Schedule Slot</p>
