@@ -1,0 +1,15 @@
+@import "../../sass/variables.scss";
+
+.layout {
+  display: flex;
+  align-items: flex-start;
+  background-color: $yellow;
+}
+
+.layoutChildren {
+  flex: 0 0 100%;
+
+  @media all and (min-width: $tablet) {
+    flex: 0 0 calc(100% - 360px);
+  }
+}

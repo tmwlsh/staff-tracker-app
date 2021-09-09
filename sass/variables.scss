@@ -1,0 +1,20 @@
+// colours
+$purple:    #6F69AC;
+$teal:      #95DAC1;
+$yellow:    #FFEBA1;
+$pink:      #FD6F96;
+$white:     #ffffff;
+$black:     #000000;
+$red:       #fa3e3e;
+
+// breakpoints
+$mobile:    640px;
+$tablet:    1080px;
+$desktop:   1400px;
+
+// misc
+$transition: .15s cubic-bezier(.73,.1,.26,.9);
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap');
+$poppins: 'Poppins', sans-serif;
