@@ -6,8 +6,6 @@ import * as data from "../../data/index.json";
 
 const SchedulesList = () => {
 
-  // const [staffList, setStaffList] = useState(data.staff);
-
   const schedules = data.schedules;
 
   const viewSchedule = (e) => {
@@ -28,7 +26,10 @@ const SchedulesList = () => {
 
   const list = schedules.map((item, index) => {
     return (
-      <li className={item.archived ? styles['archived'] : ''}>
+      <li
+        key={`${item.date.replace(/\s+/g, '-').toLowerCase()}-${index}`}
+        className={item.archived ? styles['archived'] : ''}
+      >
         {item.archived ? (
           <div className={styles.archivedSchedule}>
             <p className={styles.archivedScheduleLabel}>Archived</p>
