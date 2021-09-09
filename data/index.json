@@ -1,10 +1,11 @@
 {
   "staff": [
     { "name": "Tom Walsh" },
-    { "name": "Andrew Moody" },
-    { "name": "Beth Crowe" },
-    { "name": "Jonny Longfellow" },
-    { "name": "Imogen McAllister" }
+    { "name": "Billy Bob" },
+    { "name": "Seth Rogan" },
+    { "name": "Jon Doe" },
+    { "name": "Batista" },
+    { "name": "Ryan Reynolds" }
   ],
   "schedules": [
     {
