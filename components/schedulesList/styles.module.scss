@@ -1,0 +1,169 @@
+@import "../../sass/variables.scss";
+
+.schedulesList {
+  padding: 30px;
+  box-sizing: border-box;
+
+  @media all and (min-width: $tablet) {
+    padding: 30px 80px;
+  }
+}
+
+.schedulesListItems {
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    padding: 10px 0;
+    border-radius: 3px;
+    list-style-type: none;
+    flex-direction: column;
+    border-bottom: 1px solid rgba($black, 0.3);
+
+    &.archived {
+      color: rgba($black, 0.3);
+    }
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+  }
+
+  @media all and (min-width: $mobile) {
+    li {
+      padding: 20px 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  @media all and (min-width: $tablet) {
+    margin: 0 0 0 -30px;
+
+    li {
+      font-size: 24px;
+      border-bottom: 0;
+      padding: 20px 30px;
+      transition: $transition;
+
+      .listItemOptions {
+        opacity: 0;
+        pointer-events: none;
+        transition: $transition;
+      }
+
+      &:hover {
+        background-color: rgba($black, 0.1);
+
+        .listItemOptions {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+  }
+}
+
+.listItemOptions {
+  display: inline-flex;
+  margin: 10px 0;
+
+  p {
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px 0 0;
+    padding: 3px 10px;
+    border-radius: 3px;
+    color: $white;
+    background-color: $green;
+
+    &:nth-of-type(2) {
+      color: $white;
+      background-color: $pink;
+    }
+
+    &:nth-of-type(3) {
+      margin: 0;
+      color: $white;
+      background-color: $red;
+    }
+
+    @media all and (min-width: $tablet) {
+      transition: $transition;
+
+      &:hover {
+        &:nth-of-type(1) {
+          background-color: lighten($green, 5%);
+        }
+
+        &:nth-of-type(2) {
+          background-color: lighten($pink, 5%);
+        }
+
+        &:nth-of-type(3) {
+          background-color: lighten($red, 5%);
+        }
+      }
+    }
+  }
+
+  @media all and (min-width: $mobile) {
+    margin: 0;
+  }
+}
+
+.archivedSchedule {
+  display: flex;
+  flex-direction: column;
+
+  @media all and (min-width: $mobile) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.archivedScheduleLabel {
+  color: $white;
+  margin: 10px 0;
+  font-size: 16px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  text-align: center;
+  background-color: rgba($red, 0.6);
+
+  @media all and (min-width: $mobile) {
+    margin: 0 20px 0 0;
+    display: inline-flex;
+  }
+}
+
+.addschedulesMember {
+  cursor: pointer;
+  font-size: 18px;
+  margin: 30px 0 0 0;
+  padding: 15px 30px;
+  border-radius: 3px;
+  color: $white;
+  background-color: $pink;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media all and (min-width: $mobile) {
+    display: inline-flex;
+    width: auto;
+  }
+
+  @media all and (min-width: $tablet) {
+    transition: $transition;
+
+    &:hover {
+      background-color: lighten($pink, 5%);
+    }
+  }
+}

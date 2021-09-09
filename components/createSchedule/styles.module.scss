@@ -1,0 +1,126 @@
+@import "../../sass/variables.scss";
+
+.createSchedule {
+  padding: 30px;
+  box-sizing: border-box;
+
+  @media all and (min-width: $tablet) {
+    padding: 30px 80px;
+  }
+}
+
+.createScheduleForm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.scheduleFormLabel {
+  flex: 0 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 30px 0;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    display: block;
+    flex: 0 0 100%;
+    margin: 0 0 15px 0;
+    font-size: 18px;
+  }
+
+  @media all and (min-width: $tablet) {
+    span {
+      font-size: 24px;
+    }
+  }
+}
+
+.scheduleSlotRow {
+  flex: 0 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  input, select {
+    border: 0;
+    outline: none;
+    padding: 20px;
+    font-size: 16px;
+    appearance: none;
+    border-radius: 3px;
+    display: inline-flex;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+  }
+
+  @media all and (min-width: $tablet) {
+    input, select {
+      margin-bottom: 0;
+      flex: 0 0 calc(50% - 10px);
+    }
+  }
+}
+
+.formOptions {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  p {
+    width: 100%;
+    color: $white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 3px;
+    background-color: $green;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin: 0 10px 10px 0;
+
+    &:nth-of-type(1) {
+      background-color: $purple;
+    }
+
+    &:nth-of-type(2) {
+      background-color: $green;
+    }
+
+    &:nth-of-type(3) {
+      background-color: $pink;
+    }
+  }
+
+  @media all and (min-width: $mobile) {
+    p {
+      width: auto;
+      flex: 0 0 auto;
+      display: inline-flex;
+    }
+  }
+
+  @media all and (min-width: $tablet) {
+    p {
+      transition: $transition;
+
+      &:hover {
+        &:nth-of-type(1) {
+          background-color: lighten($purple, 5%);
+        }
+
+        &:nth-of-type(2) {
+          background-color: lighten($green, 5%);
+        }
+
+        &:nth-of-type(3) {
+          background-color: lighten($pink, 5%);
+        }
+      }
+    }
+  }
+}

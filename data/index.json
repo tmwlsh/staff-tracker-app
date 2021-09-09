@@ -5,5 +5,111 @@
     { "name": "Beth Crowe" },
     { "name": "Jonny Longfellow" },
     { "name": "Imogen McAllister" }
+  ],
+  "schedules": [
+    {
+      "date": "09-09-2021",
+      "archived": false,
+      "schedule": [
+        {
+          "staff_member": "Tom Walsh",
+          "shift": "09:00 - 17:30",
+          "section": "Till 1"
+        },
+        {
+          "staff_member": "Beth Crowe",
+          "shift": "09:00 - 17:30",
+          "section": "Kitchen"
+        },
+        {
+          "staff_member": "Andrew Moody",
+          "shift": "10:00 - 14:00",
+          "section": "Cleaning Duty"
+        },
+        {
+          "staff_member": "Imogen McAllister",
+          "shift": "12:00 - 17:30",
+          "section": "Kitchen"
+        }
+      ]
+    },
+    {
+      "date": "10-09-2021",
+      "archived": false,
+      "schedule": [
+        {
+          "staff_member": "Tom Walsh",
+          "shift": "09:00 - 17:30",
+          "section": "Kitchen"
+        },
+        {
+          "staff_member": "Beth Crowe",
+          "shift": "09:00 - 17:30",
+          "section": "Till 1"
+        },
+        {
+          "staff_member": "Andrew Moody",
+          "shift": "12:00 - 17:30",
+          "section": "Kitchen"
+        },
+        {
+          "staff_member": "Imogen McAllister",
+          "shift": "10:00 - 14:00",
+          "section": "Cleaning Duty"
+        }
+      ]
+    },
+    {
+      "date": "09-09-2021",
+      "archived": true,
+      "schedule": [
+        {
+          "staff_member": "Tom Walsh",
+          "shift": "09:00 - 17:30",
+          "section": "Till 1"
+        },
+        {
+          "staff_member": "Beth Crowe",
+          "shift": "09:00 - 17:30",
+          "section": "Kitchen"
+        },
+        {
+          "staff_member": "Andrew Moody",
+          "shift": "10:00 - 14:00",
+          "section": "Cleaning Duty"
+        },
+        {
+          "staff_member": "Imogen McAllister",
+          "shift": "12:00 - 17:30",
+          "section": "Kitchen"
+        }
+      ]
+    },
+    {
+      "date": "10-09-2021",
+      "archived": true,
+      "schedule": [
+        {
+          "staff_member": "Tom Walsh",
+          "shift": "09:00 - 17:30",
+          "section": "Kitchen"
+        },
+        {
+          "staff_member": "Beth Crowe",
+          "shift": "09:00 - 17:30",
+          "section": "Till 1"
+        },
+        {
+          "staff_member": "Andrew Moody",
+          "shift": "12:00 - 17:30",
+          "section": "Kitchen"
+        },
+        {
+          "staff_member": "Imogen McAllister",
+          "shift": "10:00 - 14:00",
+          "section": "Cleaning Duty"
+        }
+      ]
+    }
   ]
 }

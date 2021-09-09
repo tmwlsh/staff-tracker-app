@@ -1,11 +1,12 @@
 import * as React from "react";
 
 import { Layout } from "../components/layout";
+import { CreateScheduleBlock } from "../components/createSchedule";
 
 const CreateSchedule = () => {
   return (
     <Layout title="Create Schedule">
-      <h1>Create Schedule</h1>
+      <CreateScheduleBlock />
     </Layout>
   )
 }
