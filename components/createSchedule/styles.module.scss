@@ -65,8 +65,39 @@
   @media all and (min-width: $tablet) {
     input, select {
       margin-bottom: 0;
-      flex: 0 0 calc(50% - 10px);
+      flex: 0 0 calc(50% - 30px);
     }
+  }
+}
+
+.deleteScheduleSlotRow {
+  height: 30px;
+  flex: 0 0 30px;
+  cursor: pointer;
+  position: relative;
+
+  &:before {
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 5px;
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    background-color: $red;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:after {
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 5px;
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    background-color: $red;
+    transform: translate(-50%, -50%) rotate(45deg);
   }
 }
 

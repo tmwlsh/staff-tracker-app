@@ -21,6 +21,12 @@ const CreateScheduleBlock = () => {
     alert("Save As Template")
   }
 
+  const deleteScheduleRow = (e) => {
+    console.log(e.target.parentNode);
+    console.log('index:', rowCount.indexOf(e.target.parentNode));
+    // alert("Delete Schedule Row")
+  }
+
   return (
     <div className={styles.createSchedule}>
       <form className={styles.createScheduleForm}>
@@ -34,17 +40,21 @@ const CreateScheduleBlock = () => {
 
         <label className={styles.scheduleFormLabel}>
           <span>Schedule Slots</span>
-          {[...Array(rowCount)].map((item, itemIndex) => (
-            <div className={styles.scheduleSlotRow}>
-              <input type="text" placeholder="Location. eg. Kitchen / Vehicle 2 / Leeds Office" />
-              <select>
-                <option disabled selected="selected">Staff Member</option>
-                {data.staff.map((item, index) => (
-                  <option key={`${item.name.replace(/\s+/g, '-').toLowerCase()}-${index}`}>{item.name}</option>
-                ))}
-              </select>
-            </div>
-          ))}
+          {[...Array(rowCount)].map((item, index) => {
+            const itemIndex = `schedule-row-${index}`;
+            return (
+              <div key={itemIndex} className={styles.scheduleSlotRow}>
+                <input type="text" placeholder="Location. eg. Kitchen / Vehicle 2 / Leeds Office" />
+                <select>
+                  <option disabled selected="selected">Staff Member</option>
+                  {data.staff.map((item, index) => (
+                    <option key={`${item.name.replace(/\s+/g, '-').toLowerCase()}-${index}`}>{item.name}</option>
+                  ))}
+                </select>
+                <div onClick={(e) => deleteScheduleRow(e)} className={styles.deleteScheduleSlotRow} />
+              </div>
+            )
+          })}
         </label>
 
         <div className={styles.formOptions}>
