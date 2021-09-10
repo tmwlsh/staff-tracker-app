@@ -23,7 +23,8 @@ const CreateScheduleBlock = () => {
 
   const deleteScheduleRow = (e) => {
     console.log(e.target.parentNode);
-    console.log('index:', rowCount.indexOf(e.target.parentNode));
+    // console.log('index:', rowCount.indexOf(e.target.parentNode));
+    console.log('parents', e.target.parentNode.parentNode);
     // alert("Delete Schedule Row")
   }
 
