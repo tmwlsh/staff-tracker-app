@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from 'uuid'
 
 import * as styles from "./styles.module.scss";
 
@@ -6,11 +7,12 @@ import * as data from "../../data/index.json";
 
 const CreateScheduleBlock = () => {
 
-  const [rowCount, setRowCount] = useState(2);
+  const [rows, setRows] = useState([uuidv4()]);
 
   const addScheduleRow = (e) => {
     e.preventDefault();
-    setRowCount(rowCount + 1);
+    // Merge current rows with new one
+    setRows([...rows, uuidv4()])
   }
 
   const createSchedule = (e) => {
@@ -21,11 +23,10 @@ const CreateScheduleBlock = () => {
     alert("Save As Template")
   }
 
-  const deleteScheduleRow = (e) => {
-    console.log(e.target.parentNode);
-    // console.log('index:', rowCount.indexOf(e.target.parentNode));
-    console.log('parents', e.target.parentNode.parentNode);
-    // alert("Delete Schedule Row")
+  const deleteScheduleRow = (e, rowId) => {
+    // https://stackoverflow.com/questions/3954438/how-to-remove-item-from-array-by-value#answer-20827100
+    const filteredRows = rows.filter(row => row !== rowId)
+    setRows(filteredRows)
   }
 
   return (
@@ -41,10 +42,9 @@ const CreateScheduleBlock = () => {
 
         <label className={styles.scheduleFormLabel}>
           <span>Schedule Slots</span>
-          {[...Array(rowCount)].map((item, index) => {
-            const itemIndex = `schedule-row-${index}`;
+          {rows.map((rowId) => {
             return (
-              <div key={itemIndex} className={styles.scheduleSlotRow}>
+              <div key={rowId} className={styles.scheduleSlotRow}>
                 <input type="text" placeholder="Location. eg. Kitchen / Vehicle 2 / Leeds Office" />
                 <select>
                   <option disabled selected="selected">Staff Member</option>
@@ -52,7 +52,7 @@ const CreateScheduleBlock = () => {
                     <option key={`${item.name.replace(/\s+/g, '-').toLowerCase()}-${index}`}>{item.name}</option>
                   ))}
                 </select>
-                <div onClick={(e) => deleteScheduleRow(e)} className={styles.deleteScheduleSlotRow} />
+                <div onClick={(e) => deleteScheduleRow(e, rowId)} className={styles.deleteScheduleSlotRow} />
               </div>
             )
           })}
