@@ -15,6 +15,11 @@ const Sidebar = ({hambOpen}) => {
         <li><Link href="/staff-schedules"><a>Staff Schedules</a></Link></li>
         <li><Link href="/create-schedule"><a>Create Schedule</a></Link></li>
       </ul>
+      <ul className={styles.sidebarMenu}>
+        <li><Link href="/login"><a>Login</a></Link></li>
+        <li><Link href="/signup"><a>Signup</a></Link></li>
+        <li><Link href="/my-account"><a>My Account</a></Link></li>
+      </ul>
     </div>
   )
 }

@@ -14,13 +14,18 @@
 
 .headerTitle {
   color: $black;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
+
+  @media all and (min-width: $tablet) {
+    font-size: 24px;
+  }
 }
 
 .headerHamb {
   width: 52px;
   height: 52px;
+  z-index: 100;
   cursor: pointer;
   position: relative;
   margin-right: 20px;
@@ -54,6 +59,7 @@
     transform: rotate(180deg);
 
     .line {
+      background-color: $white;
 
       &:nth-of-type(1) {
         top: 25px;

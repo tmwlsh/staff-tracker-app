@@ -1,0 +1,80 @@
+@import "../../sass/variables.scss";
+
+.formOuter {
+  padding: 30px;
+  box-sizing: border-box;
+
+  form {
+    label {
+      display: flex;
+      margin-bottom: 20px;
+      flex-direction: column;
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        border: 0;
+        width: 100%;
+        outline: none;
+        padding: 20px;
+        max-width: 100%;
+        font-size: 16px;
+        appearance: none;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        display: inline-flex;
+        box-sizing: border-box;
+        background-color: $white;
+
+        &::placeholder {
+          color: rgba($black, 0.5);
+        }
+
+        @media all and (min-width: $tablet) {
+          max-width: calc(50% - 30px);
+        }
+      }
+
+      input[type="submit"] {
+        border: 0;
+        outline: none;
+        color: $white;
+        cursor: pointer;
+        font-size: 18px;
+        appearance: none;
+        max-width: 100%;
+        padding: 15px 30px;
+        border-radius: 3px;
+        box-sizing: border-box;
+        background-color: $green;
+
+        @media all and (min-width: $tablet) {
+          max-width: 120px;
+
+          &:hover {
+            background-color: lighten($green, 5%);
+          }
+        }
+      }
+
+      p {
+        display: block;
+        flex: 0 0 100%;
+        margin: 0 0 15px 0;
+        font-size: 18px;
+
+        @media all and (min-width: $tablet) {
+          font-size: 24px;
+        }
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media all and (min-width: $tablet) {
+    padding: 30px 80px;
+  }
+}

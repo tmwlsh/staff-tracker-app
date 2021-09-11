@@ -46,12 +46,14 @@ const CreateScheduleBlock = () => {
             return (
               <div key={rowId} className={styles.scheduleSlotRow}>
                 <input type="text" placeholder="Location. eg. Kitchen / Vehicle 2 / Leeds Office" />
-                <select>
-                  <option disabled selected="selected">Staff Member</option>
-                  {data.staff.map((item, index) => (
-                    <option key={`${item.name.replace(/\s+/g, '-').toLowerCase()}-${index}`}>{item.name}</option>
-                  ))}
-                </select>
+                <div className={styles.selectContainer}>
+                  <select>
+                    <option disabled selected="selected">Staff Member</option>
+                    {data.staff.map((item, index) => (
+                      <option key={`${item.name.replace(/\s+/g, '-').toLowerCase()}-${index}`}>{item.name}</option>
+                    ))}
+                  </select>
+                </div>
                 <div onClick={(e) => deleteScheduleRow(e, rowId)} className={styles.deleteScheduleSlotRow} />
               </div>
             )
